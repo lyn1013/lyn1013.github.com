@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="zns_style.css">
+	<script src="tween.js"></script>
+	<script>
+		window.onload=function(){
+			var obtn = document.getElementById('btn1');
+			var obtn2 = document.getElementById('btn2');
+			var oul = document.getElementById('znsRotatePic');
+			var ali = oul.getElementsByTagName('li');
+			var omg = oul.getElementsByTagName('img');
+			var arr=[];
+			for (var i = 0; i < ali.length; i++) {
+				arr.push({
+					left:ali[i].offsetLeft,
+					top:ali[i].offsetTop,
+					imgT:omg[i].offsetTop,
+					width:omg[i].offsetWidth,
+					zIndex:getStyle(ali[i],'z-index'),
+					opacity:getStyle(omg[i],'opacity')
+				})
+			}
+			console.log(arr);
+			obtn.onclick=function(){
+				arr.unshift(arr.pop());
+				wl();
+			}
+			obtn2.onclick=function(){
+				arr.push(arr.shift());
+				wl();
+			}
+			function wl(){
+				for (var i = 0; i < ali.length; i++) {
+					tween(ali[i],{left:arr[i].left,top:arr[i].top});
+					tween(omg[i],{opacity:arr[i].opacity,width:arr[i].width,top:arr[i].imgT});
+					ali[i].style.zIndex=arr[i].zIndex;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="向左走" id="btn1">
+	<input type="button" value="向右走" id="btn2">
+	<ul id="znsRotatePic">
+		<li class="pic1">
+			<a href="javascript:;"><img src="images/pic1.gif" alt="pic1" class="unactive"  width="187" /></a><!-- 208 -->
+			<span></span>
+		</li>
+		<li class="pic2">
+			<a href="javascript:;"><img src="images/pic2.gif" alt="pic2"  width="208" /></a>
+			<span></span>
+		</li>
+		<li class="pic3">
+			<a href="javascript:;"><img src="images/pic3.gif" alt="pic3" class="unactive"  width="187" /></a>
+			<span></span>
+		</li>
+	</ul>
+</body>
+</html>

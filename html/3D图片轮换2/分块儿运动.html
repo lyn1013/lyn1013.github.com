@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{margin: 0;padding: 0;}
+		.box{width: 800px;height: 600px;background:url(imgs/0.jpg) no-repeat;margin: 0 auto;position: relative;overflow: hidden;}
+		.box span{width: 100px;height: 100px;background:url(imgs/1.jpg) no-repeat;position: absolute;opacity:0;filter: alpha(opacity:0);}
+		/* .box span:nth-child(2){width: 1200px;height: 700px;background:url(imgs/3.jpg) no-repeat;margin: 0 auto;position: absolute;} */
+	</style>
+	<script src="move4.js"></script>
+	<script>
+		window.onload=function(){
+			var obox = document.getElementById('box');
+			var ow = obox.offsetWidth;
+			var R = 7;//行
+			var C = 12;//列
+			var timer = null;
+			var bsys = true;
+			for (var r = 0; r < R; r++) {
+				for (var c = 0; c < C; c++) {
+					var ospan = document.createElement('span');
+					ospan.style.width=obox.offsetWidth/C+'px';
+					ospan.style.height=obox.offsetHeight/R+'px';
+					obox.appendChild(ospan);
+					ospan.style.left=c*ospan.offsetWidth+'px';
+					ospan.style.top=r*ospan.offsetHeight+'px';
+					ospan.style.backgroundPosition='-'+c*ospan.offsetWidth+'px -'+r*ospan.offsetHeight+'px';
+					ospan.c=c;
+					ospan.r=r;
+					/*alert(ospan.r)*/
+				}
+			}
+			var aspan = obox.children;
+			var m = 0;
+			document.onclick=function(){
+				if (bsys) {
+					var i = 0;
+					m++;
+					console.log(m);
+					for (var i = 0; i < aspan.length; i++) {
+						;(function(index){
+							setTimeout(function(){
+							aspan[index].style.opacity=0;
+							aspan[index].style.filter='alpha(opacity:0)';
+							aspan[index].style.backgroundImage='url(imgs/'+m%5+'.jpg)';
+							move(aspan[index],{opacity:1});
+							if (index==aspan.length-1 /*c*r=aspan.length*/) {
+								bsys=true;
+							};
+					},100*(aspan[index].c+aspan[index].r));
+
+						})(i);
+					}
+					
+				}
+				bsys=false;
+			}
+			
+			
+		}
+	</script>
+</head>
+<body>
+	<div class="box" id="box">
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{margin: 0;padding: 0;list-style: none;}
+		#ul{width: 500px;height: 500px;margin: 50px auto;}
+		#ul li{float: left;margin: 10px;position: relative;width: 200px;height: 150px;float: left;}
+		img{display:block;width: 200px;height: 150px;position: absolute;left: 0;top: 0;border-radius: 50%;}
+	</style>
+	<script src="move4.js"></script>
+	<script>
+		window.onload=function(){
+			var oul = document.getElementById('ul');
+			var omg = document.getElementsByTagName('img');
+			for (var i = 0; i < omg.length; i++) {
+				;(function(index){
+					omg[i].onmouseover=function(){
+						move(omg[index],{width:400,height:300,left:-100,top:-75},{time:'1000'});
+						omg[index].style.zIndex=99;
+					}
+					omg[i].onmouseout=function(){
+						move(omg[index],{width:200,height:150,left:0,top:0},{time:'1000'});
+						omg[index].style.zIndex=1;
+					}
+				})(i);
+			
+			}
+			
+		}
+	</script>
+</head>
+<body>
+<ul id="ul">
+	<li><img src="img/10.jpg" alt="" id=""></li>
+	<li><img src="img/10.jpg" alt="" id=""></li>
+	<li><img src="img/10.jpg" alt="" id=""></li>
+	<li><img src="img/10.jpg" alt="" id=""></li>
+	<li><img src="img/10.jpg" alt="" id=""></li>
+	<li><img src="img/10.jpg" alt="" id=""></li>
+</ul>
+	
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{margin: 0;padding: 0;list-style: none;}
+		audio{display:block;position: fixed;bottom: 0;right: 0;opacity:0.5;}
+		#ul{width: 400px;height: 40px;position: absolute;right: 0;top: 0;}
+		#ul li{width: 100px;height: 20px;font:bold 20px/20px "仿宋";color:lightyellow;text-align: center;margin: 15px;cursor:pointer;float: left;}
+		.box{width: 400px;height: 300px;position: absolute;left: 120px;top: 100px;}
+		.box img{width: 400px;height: 300px;border-radius: 50%;opacity:0.4;}
+		.box p{font:bold 20px/20px "仿宋";position: absolute;left: 160px;top: 10px;}
+		.box ul{width: 230px;height: 200px;position: absolute;left: 110px;top: 70px;display:none;}
+		.box ul li{font:20px/20px "宋体";color:purple;height: 30px;margin: 10px;}
+
+		.box1{width: 400px;height: 300px;position: absolute;left: 620px;top: 100px;}
+		.box1 img{width: 400px;height: 300px;border-radius: 50%;opacity:0.4;}
+		.box1 p{font:bold 20px/20px "仿宋";position: absolute;left: 160px;top: 10px;}
+		.box1 ul{width: 230px;height: 200px;position: absolute;left: 180px;top: 70px;display:none;}
+		.box1 ul li{font:20px/20px "宋体";color:yellow;height: 30px;margin: 10px;}
+
+		.box2{width: 400px;height: 300px;position: absolute;left: 370px;top: 460px;}
+		.box2 img{width: 400px;height: 300px;border-radius: 50%;opacity:0.4;}
+		.box2 h3{font:bold 20px/20px "仿宋";position: absolute;left: 160px;top: 10px;}
+		.box2 p{font:20px/20px "宋体";color:blue;position: absolute;left: 50px;top: 60px;display:none;}
+	</style>
+	<script>
+		window.onload=function(){
+			var oUl = document.getElementById('ul');
+			var oLi = oUl.children;
+			var obox = document.getElementById('box');
+			var oul = document.getElementById('ul1');
+			var obox1 = document.getElementById('box1');
+			var oul1 = document.getElementById('ul2');
+			var obox2 = document.getElementById('box2');
+			var op = obox2.getElementsByTagName('p')[0];
+			oLi[0].onclick=function(){
+				window.open('个人主页.html','_self');
+			}
+			oLi[1].onclick=function(){
+				window.location.reload();
+				/*window.open('个人简介.html','_self');*/
+			}
+			oLi[2].onclick=function(){
+				window.open('作品展示.html','_self');
+			}
+			obox.onmouseover=function(){
+				oul.style.display='block';
+			}
+			obox.onmouseout=function(){
+				oul.style.display='none';
+			}
+			obox1.onmouseover=function(){
+				oul1.style.display='block';
+			}
+			obox1.onmouseout=function(){
+				oul1.style.display='none';
+			}
+			obox2.onmouseover=function(){
+				op.style.display='block';
+			}
+			obox2.onmouseout=function(){
+				op.style.display='none';
+			}
+			
+		}
+	</script>
+</head>
+<body background="bg5.jpg">
+	<div class="box" id="box">
+		<img src="bg1.jpg" alt="">
+		<p>基本资料</p>
+		<ul id="ul1">
+			<li>姓&nbsp;&nbsp;名:李亚男</li>
+			<li>性&nbsp;&nbsp;别:男</li>
+			<li>年&nbsp;&nbsp;龄:你猜啊</li>
+			<li>专&nbsp;&nbsp;业:大家都知道嘞</li>
+			<li>毕业时间:猴年马月</li>
+
+		</ul>
+	</div>
+	<div class="box1" id="box1">
+		<img src="bg2.jpg" alt="">
+		<p>基本技能</p>
+		<ul id="ul2">
+			<li>JS</li>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>PS</li>
+		</ul>
+	</div>
+	<div class="box2" id="box2">
+		<img src="bg3.jpg" alt="">
+		<h3>自我评价</h3>
+		<p>随便巴拉巴拉什么</p>
+		
+	</div>
+	<ul id="ul">
+		<li>首页</li>
+		<li>个人简介</li>
+		<li>作品展示</li>
+	</ul>
+	<audio src="Lainey Lou - Oceanside.mp3" controls="controls" autoplay="autoplay"></audio>
+</body>
+</html>

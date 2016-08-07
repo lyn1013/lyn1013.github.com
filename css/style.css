@@ -1,0 +1,925 @@
+/*----
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+---*/
+html,body{
+	font-family: 'Lato', sans-serif;
+}
+li{list-style: none;}
+.clear{
+	clear:both;
+}
+body a{
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+	-o-transition:0.5s all;
+}
+body input[type="text"],body input[type="submit"],body textarea,body input[type="button"]{
+	-webkit-appearance:none;
+}
+/*------ HEADERBG STARTS---------*/
+.headerbg{
+	background: url(../images/bannerbg.png);
+	min-height:700px;
+	width:100%;
+	background-size:cover;
+}
+/*------ HEADER STARTS---------*/
+.header{
+	background:rgba(0, 0, 0, 0.24);
+}
+/*------ CONTAINER STARTS---------*/
+.container{
+	width:70%;
+	position: relative;
+}
+/*------ LOGO STARTS---------*/
+.logo{
+	float:left;
+	margin:0.5em 0 0.5em 0em;
+}
+.logo a{
+	color:#B5A9B7;
+	font-size:1.9em;
+}
+.logo a:hover{
+	color:#B5A9B7;
+    text-decoration:none;
+}
+/*------ LOGO ENDS---------*/
+/*------ TOPNAV STARTS---------*/
+.nav{
+	float:right;
+}
+.nav ul{
+	z-index:999;
+	position: fixed;
+	right:0;
+	top: 0.2em;
+	
+}
+
+.nav ul li{
+	display:inline-block;	
+}
+.nav ul li a{
+	z-index:999;
+	font-size: 1.2em;
+	color:orange;
+	position: relative;
+}
+
+.nav ul li a:hover{
+	text-decoration:none;
+}
+/*------ TOPNAV ENDS---------*/
+/*------ HEADER ENDS---------*/
+/*------ BANNER STARTS---------*/
+.banner{
+  	position: absolute;
+	width: 86%;
+}
+.banner-info{
+	width: 70%;
+	float: right;
+}
+.bannerlogo{
+	float: left;
+	margin-top: 0.8em;
+}
+.bannerhead{
+	float:right;
+}
+.bannerhead h2{
+	color: purple;
+	margin:0;
+	padding:0;
+}
+.bannerhead h2 span{
+	color:black;
+	font-weight:bolder;
+	font-size:1em;
+}
+.bannerhead h3{
+	color:#281D24;
+	font-weight:bolder;
+    font-size:1.5em;
+}
+.bannerhead p{
+	margin-top: 1.2em;
+}
+.bannerhead p span{
+	opacity:0;
+	color:black;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+a.downarrow  span{
+ 	height:48px;
+    width:48px;
+    background:url(../images/down.png);
+    display:inline-block;
+}
+a.downarrow{
+  	display: block;
+	position: absolute;
+	top: 370px;
+	left: 17%;
+}
+.bannerhead{
+	position: relative;
+	width: 90%;
+}
+.banner-info{
+	position: relative;
+	top: 182px;
+	left: 11%;
+}
+/*------ About STARTS---------*/
+.about{
+	color:white;
+	text-align:center;
+	background:#281D24;
+}
+.header-section h2{
+	color: #C6C3C5;
+	font-weight: 300;
+	margin-top: 2.5em;
+	margin: 0;
+	padding: 2em 0 1em 0;
+}
+.header-section span{
+	background: #8C868A;
+	height:1px;
+	width:20%;
+	display:inline-block;
+	vertical-align:middle;
+}
+.header-section span:nth-child(1){
+	margin-right:10px;
+}
+.header-section span:nth-child(2){
+	margin-left:10px;
+}
+.about span p{
+	font:18px/30px "宋体";
+	width: 71%;
+	margin: 0 auto;
+}
+.years{
+	margin-bottom:4em;
+	color:#F1F0F0;
+}
+.years p{
+	line-height:2em;
+	width: 45%;
+	margin:0 auto;
+}
+.labs p{
+	width: 50%;
+	margin: 0 auto;
+}
+.years h4{
+	margin-top:1em;
+	font:20px/30px "宋体";
+	color:purple;}
+.years span h4{
+	margin-top:1em;
+	font:18px/30px "宋体";
+	color:#fff;
+}
+.arrow span{
+	height:48px;
+	width:48px;
+	background:url(../images/bwn.png);
+	display:inline-block;
+}
+a.arrow{
+	margin:2em 0 4em 0;
+	display:inline-block;
+}
+/*------Skill-Section STARTS---------*/
+.skills{
+	min-height:600px;
+	background:#20191B;
+	position:relative;
+}
+.skill-section h2{
+	color:#C6C3C5;
+	font-weight:300;
+	margin-top:1.5em;
+}
+.skill-section span{
+	background: #8C868A;
+	height:1px;
+	width:20%;
+	display:inline-block;
+	vertical-align:middle;
+}
+.skill-section span:nth-child(1){
+	margin-right:10px;
+}
+.skill-section span:nth-child(2){
+	margin-left:10px;
+}
+.skill-grids{
+	padding:3em 0;
+}
+.skill-grid h3{
+	color:#FFF;
+	font-size:1.8em;
+}
+.skill-grid .pie1{position: absolute;left:-30%;top: 200%;}
+.circle{
+	color:#FFF;
+}
+.down span{
+	height:48px;
+	width:48px;
+	background:url(../images/bwn.png);
+	display:inline-block;
+}
+a.down{
+	padding:4em 0 0 2em;
+	display:inline-block;
+	position: absolute;
+    left:46%;
+}
+#boss{width: 300px;height: 300px;position: absolute;left:-135px;top: 150px;}
+
+#boss1{width: 900px;height:500px;position: absolute;left:-400px;top:700px;}
+#boss1 .box0{width: 200px;height: 200px;background:black;float: left;position: relative;overflow: hidden;border: 5px solid #ddd;}
+#boss1 .box0 .wl{width: 200px;height: 200px;background:#ddd;opacity:.7;position: absolute;left:0;top: 200px;}
+.box0 .wl p{width: 190px;font:16px/20px "宋体";position: absolute;left: 0;top:80px;text-align: center;}
+/* #boss1{width:100%;height: 500px;position: absolute;left: 50%;top:600px;} */
+.box2{width: 305px;height: 305px;border-radius: 50%;position: absolute;left: -12px;top:0;}
+.nav ul li{width: 80px;height: 24px;position: relative;text-align: center;margin: 10px;margin-top: 20px;}
+.nav ul li.ac{width: 100px;height: 40px;border-radius: 10px;background:url(../images/bg2.jpg);position: absolute;left:-6px;top:-10px;z-index:1;}
+.xz{width: 100px;height: 100px;position: absolute;left: 92px;top: 100px;background:#b2ccdd;border-radius: 50%;font:20px/100px "仿宋";color:green;text-align: center;cursor:pointer;}
+.box2 span{width: 100px;height: 100px;position: absolute;left:50%;top: 0;border-radius: 50%;margin-left: -50px;margin-top: -50px;font:20px/100px "仿宋";text-align: center;color:white;cursor:pointer;background:#08364d;}
+.a1{font:30px/30px "宋体";color:purple;position: absolute;left: 32%;top: -150px;margin-left: -15px;}
+.a2{font:30px/30px "宋体";color:purple;position: absolute;left: 45%;top: -100px;margin-left: -70px;}
+.a1:hover{transform: rotate(10deg);text-decoration: none;}
+.a2:hover{transform: rotate(-10deg);text-decoration: none;}
+.span1{position: absolute;left:47%;top:1200%;}
+
+.form ol{position: absolute;left:75%;top: 150px;}
+.form ol li{width: 230px;height: 40px;font:20px/20px "仿宋";color:white;text-align: left;float: left;margin: 10px;}
+
+#box{width: 133px;height: 200px;position: absolute;left: 50%;top: 50%;margin-left: -65px;margin-top: -200px;transform:rotateX(-20deg);transform-style: preserve-3d; }
+
+#box li{width: 133px;height: 200px;position: absolute;left: 0;top: 0;transition: 1s all ease;box-shadow: 0 0 5px 1px white;border-radius: 2px;-webkit-box-reflect: below 10px -webkit-linear-gradient(bottom,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%);
+}
+
+#box span{font:30px/200px "仿宋";color:darkblue;text-align: center;display:none;}
+.personwork{position: absolute;left: 50%;}
+.pie1{float: left;}
+#canvas{width:800px;height: 300px;position: absolute;left: 50px;top: 200px;}
+.c1{width: 300px;height: 200px;position: absolute;left: -100px;top: 0;text-align: center;}
+.c1 h5{left: 120px;}
+.c2 h5{left: 130px;}
+.c3 h5{left: 90px;}
+.c4 h5{left: 90px;}
+.c2{width: 300px;height: 200px;position: absolute;left: 100px;top: 0;}
+.c3{width: 300px;height: 200px;position: absolute;left: 300px;top: 0;}
+.c4{width: 300px;height: 200px;position: absolute;left: 500px;top: 0;}
+h5{font:24px/24px "宋体";position: absolute;top: 200px;color:#dfdfdf;}
+/*------Skill-Section Ends---------*/
+/*------Portfolio-Section STARTS---------*/
+.Portfolio{
+	min-height:1500px;
+	background:#dfdfdf;
+	text-align:center;
+}
+.Portfolio-section h2{
+	color:#91898D;
+	font-size:2em;
+	padding:2em 0 1em;
+	margin: 0;
+}
+.Portfolio-section span{
+	background:#8C868A;
+	height:1px;
+	width:20%;
+	display:inline-block;
+	vertical-align:middle;
+}
+.Portfolio-section span:nth-child(1){
+	margin-right:10px;
+}
+.Portfolio-section span:nth-child(2){
+	margin-left:10px;
+}
+.portfolio-grids{
+	padding-top:2em;
+}
+.portfolio-grid{
+	display:inline-block;
+}
+.portfolio-grid p{
+	margin:3em 1em 0 1em;
+	color:#504A4C;
+	line-height:25px;
+}
+.portfolio-grid img{
+	width:100%;
+}
+a.rightarrow  span{
+	height:30px;
+	width:30.5px;
+	background:url(../images/rightarw.png);
+	display:inline-block;
+}
+a.rightarrow{
+	margin-top:1em;
+	display:inline-block;
+}
+.portdown span{
+	height:48px;
+	width:48px;
+	background:url(../images/bwn.png);
+	display:inline-block;
+	}
+a.portdown{
+	margin:4em 0 3em 1em;
+	display:inline-block;
+	}
+/*------FOOTER STARTS---------*/
+.footer{
+	background: url(../images/footerbg.jpg);
+	position: relative;
+	min-height: 620px;
+	background-size: cover;
+	position:relative;
+}
+.contact-section h2{
+	color:#D2D1D1;
+	font-weight:300;
+	font-size:2.5em;
+	padding-top:1em;
+}
+.contact-section span{
+	background: #8C868A;
+	height:1px;
+	width:20%;
+	display:inline-block;
+	vertical-align:middle;
+}
+.contact-section span:nth-child(1){
+	margin-right:10px;
+}
+.contact-section span:nth-child(2){
+	margin-left:10px;
+}
+.footer-left{
+	margin-top:1em;
+}
+.social-icons{
+}
+.social-icons a img{
+	margin-right:0.5em;
+}
+.social-icons a img:hover{
+	opacity:0.8;
+}
+.footer-left p{
+	color:#B5A9B7;
+	width:80%;
+	margin:2em 0 0 0em;
+	line-height:2em;
+}
+.footer-right{
+	text-align: right;
+	margin-top: 1.3em;
+}
+
+
+.up{
+	position:absolute;
+	bottom: 9%;
+    left: 48%;
+}
+.up span{
+	height:48px;
+	width:48px;
+	background:url(../images/up.png);
+	margin-top:2em;
+	display:inline-block;
+}
+/*---- copy-right -----*/
+p.copy-right{
+	margin-top:1em;
+	color:#999;
+	font-size:1em;
+	padding:0.8em 0;
+	text-align:right;
+}
+p.copy-right a{
+	color:#FFF;
+	text-decoration:none;
+}
+ /*----- top-top -----*/
+@media (max-width:1280px){
+ 	.years p {
+		width: 60%;
+	}
+	.portfolio-grid p {
+		margin: 2em 0em 0 0em;
+	}
+	.footer-left p {
+		width: 90%;
+	}
+}
+@media (max-width:1024px){
+	.container {
+		width:80%;
+	}
+ 	.years p {
+ 		font:18px/30px "宋体";
+		width: 80%;
+	}
+	.portfolio-grid p {
+		margin: 2em 0em 0 0em;
+	}
+	.footer-left p {
+		width: 90%;
+	}
+	.banner-info {
+		width: 80%;
+	}
+	.footer-right input[type="text"], .footer-right textarea {
+		width: 87%;
+	}
+	.headerbg {
+		min-height: 591px;
+	}
+	.banner-info {
+		top: 110px;
+	}
+	a.downarrow {
+		top: 341px;
+		left: 23%;
+	}
+	.years {
+		margin-bottom: 2em;
+	}
+	.header-section h2 {
+		padding: 1.2em 0 0 0;
+	}
+}
+@media (max-width:768px){
+	.container {
+		width:80%;
+	}
+ 	.years p {
+		width: 80%;
+	}
+	.portfolio-grid p {
+		margin: 2em 0em 0 0em;
+	}
+	.footer-left p {
+		width: 90%;
+	}
+	.banner-info {
+		width: 80%;
+	}
+	.footer-right input[type="text"], .footer-right textarea {
+		width: 100%;
+	}
+	.headerbg {
+		min-height:500px;
+	}
+	.banner-info {
+		top: 112px;
+		width: 100%;
+		left: 2%;
+	}
+	a.downarrow {
+		top: 241px;
+		left: 32%;
+	}
+	.years {
+		margin-bottom: 2em;
+	}
+	.header-section h2 {
+		padding: 1.2em 0 0.8em 0;
+	}
+	.bannerhead {
+		width: 84%;
+	}
+	.banner {
+		width: 100%;
+	}
+	.years h4, .years span h4 {
+		margin: 1em 0 0 0;
+	}
+	.skill-grid {
+		padding: 1.5em 0;
+	}
+	.skill-grids {
+		padding: 1em 0;
+	}
+	a.down {
+		padding: 0;
+		position: absolute;
+		left: 47%;
+	}
+	.skills {
+		padding: 0 0 5em 0;
+	}
+	.skill-section h2 {
+		margin-top: 1.5em;
+	}
+	a.arrow {
+		margin: 1em 0 2em 0;
+	}
+	.portfolio-grids {
+		padding-top: 1em;
+	}
+	.portfolio-grid {
+		padding: 0 0 2em 0;
+	}
+	a.portdown {
+		margin: 2em 0 2em 0em;
+	}
+	.contact-section h2 {
+		padding-top: 0.5em;
+	}
+	.footer {
+		padding: 0 0 10em;
+	}
+}
+@media (max-width:640px){
+	.container {
+		width:80%;
+	}
+ 	.years p {
+		width: 100%;
+	}
+	.portfolio-grid p {
+		margin: 2em 0em 0 0em;
+	}
+	.footer-left p {
+		width: 90%;
+	}
+	.banner-info {
+		width: 80%;
+	}
+	.footer-right input[type="text"], .footer-right textarea {
+		width: 100%;
+	}
+	.headerbg {
+		min-height:500px;
+	}
+	.banner-info {
+		top: 112px;
+		width: 100%;
+		left: 2%;
+	}
+	a.downarrow {
+		top: 241px;
+		left: 32%;
+	}
+	.years {
+		margin-bottom: 2em;
+	}
+	.header-section h2 {
+		padding: 1.2em 0 0.8em 0;
+	}
+	.bannerhead {
+		width: 84%;
+	}
+	.banner {
+		width: 100%;
+	}
+	.years h4, .years span h4 {
+		margin: 0.5em 0 0 0;
+	}
+	.skill-grid {
+		padding: 1.5em 0;
+	}
+	.skill-grids {
+		padding: 1em 0;
+	}
+	a.down {
+		padding: 0;
+		position: absolute;
+		left: 47%;
+	}
+	.skills {
+		padding: 0 0 5em 0;
+	}
+	.skill-section h2 {
+		margin-top: 1.5em;
+	}
+	a.arrow {
+		margin: 1em 0 2em 0;
+	}
+	.portfolio-grids {
+		padding-top: 1em;
+	}
+	.portfolio-grid {
+		padding: 0 0 2em 0;
+	}
+	a.portdown {
+		margin: 2em 0 2em 0em;
+	}
+	.contact-section h2 {
+		padding-top: 0.5em;
+	}
+	.footer {
+		padding: 0 0 10em;
+	}
+	.about span p {
+		margin-bottom: 2em;
+	}
+	.nav ul{
+		margin:0;
+		padding:0;
+	}
+	.nav ul li {
+		margin: 1.2em 0.5em;
+	}
+	.logo {
+		margin: 0.3em 0 0.5em 0em;
+	}
+	.bannerhead h3 {
+		font-size: 2em;
+		margin: 0.3em 0 0.3em;
+	}
+}
+@media (max-width:480px){
+	.container {
+		width:90%;
+	}
+ 	.years p {
+		width: 100%;
+		line-height: 1.6em;
+		padding: 0.5em 0 0 0;
+	}
+	.portfolio-grid p {
+		margin: 2em 0em 0 0em;
+	}
+	.footer-left p {
+		width: 100%;
+		margin: 0.8em 0 0 0;
+	}
+	.banner-info {
+		width: 80%;
+	}
+	.footer-right input[type="text"], .footer-right textarea {
+		width: 100%;
+	}
+	.headerbg {
+		min-height: 457px;
+	}
+	.banner-info {
+		top: 36px;
+		width: 100%;
+		left: 0%;
+		text-align: center;
+	}
+	a.downarrow {
+		top: 201px;
+		left: 42%;
+	}
+	.years {
+		margin-bottom: 2em;
+	}
+	.header-section h2 {
+		padding: 0.8em 0 0.5em 0;
+		line-height:1.5em;
+	}
+	.bannerhead {
+		width: 100%;
+	}
+	.banner {
+		width: 100%;
+	}
+	.years h4, .years span h4 {
+		margin: 0.5em 0 0 0;
+	}
+	.skill-grid {
+		padding: 1.5em 0;
+	}
+	.skill-grids {
+		padding: 1em 0;
+	}
+	a.down {
+		padding: 0;
+		position: absolute;
+		left: 45%;
+	}
+	.skills {
+		padding: 0 0 5em 0;
+	}
+	.skill-section h2 {
+		margin-top: 0.5em;
+	}
+	a.arrow {
+		margin: 1em 0 2em 0;
+	}
+	.portfolio-grids {
+		padding-top: 1em;
+	}
+	.portfolio-grid {
+		padding: 0 0 2em 0;
+	}
+	a.portdown {
+		margin: 1em 0 2em 0em;
+	}
+	.contact-section h2 {
+		padding-top: 0.5em;
+	}
+	.footer {
+		padding: 0 0 6em;
+	}
+	.about span p {
+		margin-bottom: 2em;
+		width: 100%;
+		line-height: 1.6em;
+	}
+	.nav ul{
+		margin:0;
+		padding:0;
+	}
+	.nav ul li {
+		margin: 0.8em 0.5em;
+	}
+	.logo {
+		margin: 0.8em 0 0em 0em;
+		float:none;
+		text-align:center;
+	}
+	.bannerhead h3 {
+		font-size: 1.6em;
+		margin: 0.3em 0 0.3em;
+	}
+	.nav {
+		float: none;
+		text-align:center;
+	}
+	.bannerlogo {
+		float: none;
+		margin-top: 0em;
+		text-align: center;
+	}
+	.skill-grid h3 {
+		font-size: 1.5em;
+	}
+	.up {
+		bottom: 1%;
+		left: 47%;
+	}
+}
+@media (max-width:320px){
+	.container {
+		width:90%;
+	}
+	.header div.container,.banner div.container{
+		padding:0;
+	}
+ 	.years p {
+		width: 100%;
+		line-height: 1.6em;
+		padding: 0.5em 0 0 0;
+	}
+	.portfolio-grid p {
+		margin: 1.2em 0em 0 0em;
+		line-height: 1.5em;
+	}
+	.footer-left p {
+		width: 100%;
+		margin: 0.8em 0 0 0;
+	}
+	.banner-info {
+		width: 80%;
+	}
+	.footer-right input[type="text"], .footer-right textarea {
+		width: 100%;
+		padding: 0.8em;
+	}
+	.headerbg {
+		min-height: 409px;
+	}
+	.banner-info {
+		top: 36px;
+		width: 100%;
+		left: 0%;
+		text-align: center;
+	}
+	a.downarrow {
+		top: 171px;
+		left: 42%;
+	}
+	.years {
+		margin-bottom: 1.5em;
+	}
+	.header-section h2 {
+		padding: 0.8em 0 0.5em 0;
+		line-height:1.5em;
+		font-size: 1.6em;
+	}
+	.about div.container{
+		padding:0;
+		position: relative;
+	} 
+	.bannerhead {
+		width: 100%;
+	}
+	.banner {
+		width: 100%;
+	}
+	.years h4, .years span h4 {
+		margin: 0.5em 0 0 0;
+	}
+	.skill-grid {
+		padding: 1em 0;
+	}
+	.skill-grids {
+		padding: 1em 0;
+	}
+	a.down {
+		padding: 0;
+		position: absolute;
+		left: 45%;
+	}
+	.skills {
+		padding: 0 0 5em 0;
+	}
+	.skill-section h2 {
+		margin-top: 0.5em;
+		font-size: 1.6em;
+	}
+	a.arrow {
+		margin: 1em 0 2em 0;
+	}
+	.portfolio-grids {
+		padding-top: 1em;
+	}
+	.portfolio-grid {
+		padding: 0 0 2em 0;
+	}
+	a.portdown {
+		margin: 1em 0 2em 0em;
+	}
+	.contact-section h2 {
+		padding-top: 0.5em;
+		font-size: 1.6em;
+	}
+	.footer {
+		padding: 0 0 6em;
+	}
+	.about span p {
+		margin-bottom: 2em;
+		width: 100%;
+		line-height: 1.6em;
+	}
+	.nav ul{
+		margin:0;
+		padding:0;
+	}
+	.nav ul li {
+		margin: 0.5em 0.2em;
+	}
+	.logo {
+		margin: 0.8em 0 0em 0em;
+		float:none;
+		text-align:center;
+	}
+	.bannerhead h3 {
+		font-size: 1.4em;
+		margin: 0.3em 0 0.3em;
+	}
+	.nav {
+		float: none;
+		text-align:center;
+	}
+	.bannerlogo {
+		float: none;
+		margin-top: 0em;
+		text-align: center;
+	}
+	.skill-grid h3 {
+		font-size: 1.5em;
+	}
+	.up {
+		bottom: 1%;
+		left: 47%;
+	}
+	.bannerhead h2 {
+		font-size: 1.8em;
+	}
+	.Portfolio-section h2 {
+		font-size: 1.6em;
+		padding: 1em 0 0.3em;
+	}
+	.footer-right input[type="submit"] {
+		float: none;
+		width:100%
+	}
+}

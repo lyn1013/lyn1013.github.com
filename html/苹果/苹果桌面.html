@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		.box{ width:100%; text-align:center; position:absolute; bottom:0;}
+	</style>
+	<script>
+		window.onload=function(){
+			var ipt = document.getElementsByTagName('input');
+			var obox = document.getElementById('box');
+			var omg = obox.children;
+			document.onmouseover=function(ev){
+				var et = ev||event;
+				for (var i = 0; i < omg.length; i++) {
+					var a = omg[i].offsetLeft+omg[i].offsetWidth/2-et.clientX;
+					var b = omg[i].offsetTop+obox.offsetTop+omg[i].offsetHeight/2-et.clientY;
+					var c = Math.sqrt(a*a+b*b);
+					var scale =1-c/500;
+					(scale<=.5) && (scale=.5);
+					ipt[i].value=scale;
+					omg[i].style.width=128*scale+'px';
+				}	
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="">
+	<input type="text" name="" id="">
+	<input type="text" name="" id="">
+	<input type="text" name="" id="">
+	<input type="text" name="" id="">	
+	<div class="box" id="box">
+		<img src="img/1.png" alt="" width="64">
+		<img src="img/2.png" alt="" width="64">
+		<img src="img/3.png" alt="" width="64">
+		<img src="img/4.png" alt="" width="64">
+		<img src="img/5.png" alt="" width="64">
+	</div>
+</body>
+</html>

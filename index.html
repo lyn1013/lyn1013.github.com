@@ -1,82 +1,306 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
-<style>
-*{margin:0; padding:0;}
-li{list-style:none;}
-.clearfix:after{content:""; display:block; clear:both;}
-.clearfix{zoom:1;}
-input{border:none; background:none;}
-
-#shadow {width:100%; height:100%; background:black; position:absolute; left:0; top:0; display:none; opacity:.5; filter:alpha(opacity=50);}
-#btn{width:120px; font:20px/2 "Microsoft YaHei"; background:#0099FF; color:#FFF; margin:200px auto; display:block;}
-.warp{width:600px; height:310px; position:absolute; top:50%; left:50%; margin-left:-301px; margin-top:-156px; border:#09F solid 1px; display:none; background-color:#FFF;}
-.title{overflow:hidden;}
-.title h3{font:14px/40px "Microsoft YaHei"; padding-left:10px; float:left;}
-.flicker_01{background:#09F;}
-.flicker_02{background:#7D7DFF;}
-.close{float:right; width:40px; height:40px;background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVDhPtZNpTsMwEIV9CxaJXYAEQpwAcQDOwRLH41j9D6hn4w4sUssOEhwCeJPMSHbillSCJ82Pznvva+vE5l9Uen9SEl157+dkNVVFCOvW+xHmXFaNCu8tYF+YbwCvrbXzYmVVg4ie6jwGwEuxjMGHNzXEvDkOYUHsRG1QPURjsY1xzu0D8BkHcsAJoGfeS6RRWZZ7bSCCt9gvst8bpMoB8fkOv/xgJpDKhrCL8EdSbE8fkIqIdlDKA2cBqQrnjnKwguhQIv2EM1rrnJEOXoNiMFiS6HQxCKXHDiQeAHFTlqWSVxbEZ8R/meg93uMp3+OmrEg11SQQHsYG+2dVtQ1AclPgP3SAp1W1CjMBofiiIBXewy0AXuMcA7kvkfpujuJADqTKAbkvdg0b9gGpcPibnIs6Q7Ea4dsuMOPfQCrOcZ57svpLGfMDkId0qOuuLNYAAAAASUVORK5CYII=") center center no-repeat;}
-.content{font:14px/1.5 "Microsoft YaHei"; padding:10px;}
-.content h3{font-size:14px;}
-</style>
-<script>
-	window.onload=function(){
-		var obtn = document.getElementById('btn');
-		var oshadow = document.getElementById('shadow');
-		var odiv = document.getElementById('div1');
-		var oclose = document.getElementById('btn_close');
-		var otitle = document.getElementById('wl');
-		var timer = null;
-		obtn.onclick=function(){
-			oshadow.style.display=odiv.style.display='block';
-		}
-		oclose.onclick=function(){
-			oshadow.style.display=odiv.style.display='none';
-		}
-		oshadow.onclick=function(){
-			clearInterval(timer);
-			var count = 0;
-			timer = setInterval(function(){
-				count++;
-				if (count%2==0) {
-					otitle.className='flicker_01';
-				} else {
-					otitle.className='flicker_02';
-				}
-			},100)
-			timer2=setTimeout(function(){
-			clearInterval(timer);
-			},1000)
-		}
-
-
-	}
+<meta charset="utf-8">
+<title></title>
+<script src="./js/jquery.min.js"> </script>
+<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="./css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/mf.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="./js/move-top.js"></script>
+<script type="text/javascript" src="./js/easing.js"></script>
+<script src="js/Charts.js"></script>
+<script src="js/person3.js"></script>
+<script src="js/move4.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
 </script>
+ 	<!--start-smoth-scrolling-->
 </head>
 <body>
-<input type="button" value="打开" id="btn" />
-<div id="shadow"></div>
-<div class="warp" id="div1">
-	<div class="title flicker_01" id="wl">
-		<h3>请选择...</h3>
-		<a href="javascript:;" id="btn_close" class="close" title="关闭"></a>
-	</div>
-	<div class="content">
-		<h3>地址：</h3>
-		<p>北京市 朝阳区 立水桥 旭辉奥都 2号楼4单元502室</p>
-		<p>&nbsp;</p>
-		<h3>交通方式：</h3>
-		<p>城铁：立水桥南站 C口出站 向北150米(大中电器立水桥新店即到)<br>公交：城铁立水桥南站下车</p>
-		<p>&nbsp;</p>
-		<h3>电话：</h3>
-		<p>15810802847(联系人：blue)<br>
-		15810802954(联系人：busy)<br>
-		15810802914(联系人：雪娜)</p>
-	</div>
+<!--headerbg starts-->
+ <div id="top-top" class="headerbg">
+	 <!--header starts-->
+	   <div class="header">
+		 <!--container starts-->
+			  <div class="container">
+			  	  <img src="images/me.jpg" alt="" class="me" style="width: 100px;height: 100px;border-radius: 50%;
+		position: absolute;left:-10%;top:100%;">
+				  <!--Navigation starts-->
+				  <div class="nav">
+					 <ul id="nav">
+						 <li><a class="scroll" href="#about">关于我</a></li>
+						 <li><a class="scroll" href="#skills">个人技能</a></li>
+						 <li><a class="scroll" href="#port">作品展示</a></li>
+						 <li><a class="scroll" href="#contact">联系我</a></li>
+						 <li class="ac"></li>
+					 </ul>
+				 </div>
+				  <!--Navigation ends-->
+					<div class="clear"></div>
+			  </div>
+		 <!--container ends-->
+	   </div>
+	 <!--header ends-->
+	 <!--Banner starts-->
+	   <div class="banner">
+	      <div class="container">
+		     <div class="banner-info">
+			      <div class="bannerhead">
+				      <h2>我 是&nbsp;<span>李 亚 男</span></h2>
+				      <h3>梦想成为前端工程师，现在还是前端菜鸟</h3>
+				      <p id="np"></p>
+					  <a class="downarrow scroll" href="#about"><span> </span></a>
+			      </div>
+			 </div>
+			 <div class="clear"></div>
+		  </div>
+	  </div>
+	  <!--Banner ends-->
+ </div>
+ <!--Headerbg ends-->
+ <!--Content starts-->
+ <div class="content">
+	 <!--About starts-->
+	   <div id="about" class="about">
+		 <div class="container">
+			   <div class="header-section text-center">
+				  <h2><span> </span>关于我<span> </span></h2>
+				</div>
+	 
+			  <div class="years">	 
+				<h4><b>森昊好时贷 2015.7-2016.6</b></h4>
+				 <span>
+					 <h4>1、负责首页页面等从设计稿到静态页面的实现;
+					 2、根据产品设计需求配合后台开发人员实现产品界面和功能，维护及前端优化;3、运用PHP和后台进行交互，完成数据展现</p>
+					 </h4>
+					 <p>工作总结:熟悉了H5及CSS3的新增特性，同时熟悉了移动端开发的常用响应式布局方法</p>
+				 </span>
+			  </div> 
+				
+			  <div class="years">	 		
+				 <h4><b>智拓科技 2014.10-2015.4</b></h4>
+				 <span><h4>1、负责参与项目web前端开发与维护以及优化;2、协助完成页面改版工作，协调测试人员及跟进开发过程中的bug;3、负责相关前端产品浏览器兼容问题</h4></span>
+				 <p>工作总结:熟练掌握了html+css页面布局，熟悉photoshop进行设计图切割，了解了前端的基本职责。</p>
+			  </div> 
+					
+			   <div class="years">	 	
+				 <h4><b>微定义 2013.12-2014.3</b></h4>
+				 <span><h4>1、负责编写网站首页及商品页面</h4></span>
+				<p>工作总结:了解了html+css静态页面开发以及整体布局</p>
+			     
+			  </div>
+				 <a class="arrow scroll" href="#skills"><span> </span></a>
+		  </div>
+	  </div>
+	 <!--About Ends-->
+	 
+	<!--SKILLS Starts-->
+	  <div id="skills" class="skills">
+	  <div class="container">
+	     <div class="skills-grids">
+			  <div class="skill-section text-center">
+				  <h2><span> </span>个人技能<span> </span></h2>
+			  </div>
+					 
+						  <div id="canvas">
+								
+										<!-- <div class="col-md-3"> -->	
+											<div class="c1">
+												<canvas id="pie1" class="pie1"></canvas>
+												<div class="circle" id="circles-1"></div>	
+												 <h5>HTML</h5>	
+											 </div>								  
+										<!-- </div> -->
+										
+											<div class="c2">
+												<canvas id="pie2" class="pie1"></canvas>
+												<div class="circle" id="circles-2"></div>
+												<h5>CSS</h5>	
+											 </div>								  
+										
+										
+											<div class="c3">
+												<canvas id="pie3" class="pie1"></canvas>
+												<div class="circle" id="circles-3"></div>
+												<h5>JavaScript</h5>	
+											 </div>								  
+										
+										
+											<div class="c4">
+												<canvas id="pie4" class="pie1"></canvas>
+												<div class="circle" id="circles-4"></div>
+												<h5>PHP/NodeJS</h5>	
+											</div>
+						   </div>
+					  
+			 </div>
+		 </div>
+		   <a class="down scroll" href="#port" style="position: absolute;left:46%;top: 70%;"><span> </span></a>
+	  </div>
+	  </div>
+	 <!--SKILLS Ends-->
+		 <!--PORTFOLIO Starts-->
+		 <div id="port" class="Portfolio">
+			  <div class="Portfolio-section text-center">
+			      <h2><span> </span>作品展示<span> </span></h2>
+			  </div>
+			  <div class="container">
+				  <div class="personwork">
+					  
+						<div class="boss" id="boss">
+							<a class="a1" href="javascript:;">HTML/CSS</a>
+							<div class="box2" id="box2"></div>
+							<div class="xz" id="xz">请点击</div>
+						</div>
+						<div class="boss1" id="boss1">
+							<a class="a2" href="javascript:;" id="a2">javaScript</a>
+							<div class="box0" style="background:url(html/imgs/pg1.jpg);">
+								<span class="wl"><p></p></span>
+							</div>
+							<div class="box0" style="background:url(html/imgs/pg2.jpg);">
+								<span class="wl"><p></p></span>
+							</div>
+							<div class="box0" style="background:url(html/imgs/pg3.jpg);">
+								<span class="wl"><p></p></span>
+							</div>
+							<div class="box0" style="background:url(html/imgs/pg4.jpg);">
+								<span class="wl"><p></p></span>
+							</div>
+							<div class="box0" style="background:url(html/imgs/pg5.jpg);">
+								<span class="wl"><p></p></span>
+							</div>
+							<div class="box0" style="background:url(html/imgs/pg6.jpg);">
+								<span class="wl"><p></p></span>
+							</div>
+							<div class="box0" style="background:url(html/imgs/pg7.jpg);">
+								<span class="wl"><p></p></span>
+							</div>
+							<div class="box0" style="background:url(html/imgs/pg8.jpg);">
+								<span class="wl"><p></p></span>
+							</div>
+						</div>
+				  </div>
+				<a class="portdown scroll" href="#contact">
+				  	<span class="span1"> </span>
+				</a>
+			  </div>
+		 </div>
+  </div>
+  <!--Content Ends-->
+  
+  <!--FOOTER Starts-->
+  <div  id="contact" class="footer">
+      <div class="container">
+	  
+		   <div class="contact-section text-center">
+			  <h2><span> </span>联系我<span> </span></h2>
+		  </div>
+		 <div class="row">
+		 	<div class="m-parent">
+    <div class="m-child1">
+      <ul>
+        <li class="div1">♈</li>
+        <li class="div2">♎</li>
+        <li class="div3">♉</li>
+        <li class="div4">♊</li>
+        <li class="div5">♋</li>
+        <li class="div6">♏</li>
+        <li class="div7">♐</li>
+        <li class="div8">♑</li>
+        <li class="div9">♓</li>
+      </ul>
+    </div>
+    <div class="m-child2">
+      <ul>
+        <li class="div1">♈</li>
+        <li class="div2">♎</li>
+        <li class="div3">♉</li>
+        <li class="div4">♊</li>
+        <li class="div5">♋</li>
+        <li class="div6">♏</li>
+        <li class="div7">♐</li>
+        <li class="div8">♑</li>
+        <li class="div9">♓</li>
+       </ul>
+     </div>
+    <div class="m-child3">
+      <ul>
+        <li class="div1">♈</li>
+        <li class="div2">♎</li>
+        <li class="div3">♉</li>
+        <li class="div4">♊</li>
+        <li class="div5">♋</li>
+        <li class="div6">♏</li>
+        <li class="div7">♐</li>
+        <li class="div8">♑</li>
+        <li class="div9">♓</li>
+      </ul>
+    </div>
+    <div class="m-child4">
+      <ul>
+        <li class="div1">♈</li>
+        <li class="div2">♎</li>
+        <li class="div3">♉</li>
+        <li class="div4">♊</li>
+        <li class="div5">♋</li>
+        <li class="div6">♏</li>
+        <li class="div7">♐</li>
+        <li class="div8">♑</li>
+        <li class="div9">♓</li>
+      </ul>
+     </div>
+    <div class="m-child5">
+      <ul>
+        <li class="div1">♈</li>
+        <li class="div2">♎</li>
+        <li class="div3">♉</li>
+        <li class="div4">♊</li>
+        <li class="div5">♋</li>
+        <li class="div6">♏</li>
+        <li class="div7">♐</li>
+        <li class="div8">♑</li>
+        <li class="div9">♓</li>
+      </ul>
+    </div>
+    <div class="m-child6">
+      <ul>
+        <li class="div1">♈</li>
+        <li class="div2">♎</li>
+        <li class="div3">♉</li>
+        <li class="div4">♊</li>
+        <li class="div5">♋</li>
+        <li class="div6">♏</li>
+        <li class="div7">♐</li>
+        <li class="div8">♑</li>
+        <li class="div9">♓</li>
+      </ul>
+    </div>
 </div>
-</body>
-</html>
+				<div class="form">
+				 	<ol>
+				 		<li>姓名:李亚男</li>
+				 		<li>性别:男</li>
+				 		<li>学历:本科</li>
+				 		<li>电话:15137138287</li>
+				 		<li>邮箱:lyn94230@163.com</li>
+				 	</ol>
+				</div>
+				
+		 </div>
+	 </div>
+	 <a class="up scroll" href="#top-top"><span></span></a>
+	  
+ </div>
+ 
+ </body>
+ </html>
+ 
+   

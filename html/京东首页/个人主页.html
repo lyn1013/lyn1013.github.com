@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="move4.js"></script>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;}
+		audio{display:block;position: fixed;bottom: 0;right: 0;opacity:0.5;}
+		ul{width: 400px;height: 40px;position: absolute;right: 0;top: 0;}
+		ul li{width: 100px;height: 20px;font:bold 20px/20px "仿宋";color:white;text-align: center;margin: 15px;cursor:pointer;float: left;}
+		span{opacity:0;float: left;width: 30px;height: 30px;font:20px/30px "仿宋";text-align: center;color:white;margin: 5px;border-radius: 50%;}
+		.wl{width: 1000px;position: absolute;top: 60px;left: 80px;}
+	</style>
+	<script>
+		function rnd(n,m){
+			return parseInt(Math.random()*(m-n)+n);
+		}
+		window.onload=function(){
+			var oUl = document.getElementById('ul');
+			var oLi = oUl.children;
+			var owl = document.getElementById('wl');
+			//首页刷新
+			oLi[0].onclick=function(){
+				window.location.reload();
+			}
+			oLi[1].onclick=function(){
+				window.open('个人简介.html','_self');
+			}
+			oLi[2].onclick=function(){
+				window.open('作品展示.html','_self');
+			}
+			//青春与梦想
+			var str = "也许你正挣扎于人生的得失，也许你正徘徊于痛苦的边缘，也许你曾经苦苦等待，也许你曾经失败，但请记住，其实这一切都部重要，重要的是我们拥有青春，我们拥是有梦想！拥有梦想的青春是简单快乐的，拥有梦想的青春是奋发向前的，拥有梦想的青春是无所畏惧的，拥有梦想的青春是所向无敌的！其实在梦想与现实之间，只有那一层薄得可怜的黑纱，它残忍的把梦想和现实分开，只有有梦的人才可以撕破它，让梦想与现实完美结合，碰撞出尘世间最璀璨的光辉。其实在青春与衰老之间，只有一段少得可惜的时间，它无情的把人生成两个阶段，只有好好把握住青春的人能与衰老抗争，用坚定的信念叫衰老让步。请不要害怕高处寒风凛冽，青春的我们能看到风光无限；请不要害怕天空乌云密布，拥有梦想的我们能让它光彩夺目；请不要害怕命途多舛，年轻的我们能经受起生命的考验；请不要害怕离现实万丈相隔，拥有梦想的我们能跨越一切！也许，青春的我们会迷茫，但梦想一如既往！也许，也许，梦想最后不会成真，但青春的心无怨无悔！让梦想飞越！让梦想与现实擦出耀眼的火花！";
+			var timer = null;
+			var arr = [];
+			for (var i = 0; i < str.length; i++) {
+				clearInterval(timer);
+				var aspan = document.createElement('span');
+				aspan.innerHTML=str.charAt(i);
+				aspan.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+				owl.appendChild(aspan);
+				arr.push(aspan);
+			}
+			var n = 0;
+
+			timer = setInterval(function(){
+				move(arr[n],{opacity:1});
+				n++;
+				if (n==str.length) {
+					clearInterval(timer);
+				}
+			},600)
+		}
+	</script>
+</head>
+<body background="bg4.jpg">
+	<audio src="Birdy - Wings.mp3" controls="controls" autoplay="autoplay"></audio>
+	<ul id="ul">
+		<li>首页</li>
+		<li>个人简介</li>
+		<li>作品展示</li>
+	</ul>
+	<div class="wl" id="wl"></div>
+</body>
+</html>

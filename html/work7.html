@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<link rel="stylesheet" href="">
+<style>
+	*{margin: 0;padding: 0;}
+	img{text-align: top;}
+	.box1{width: 213px;height: 150px;border: 1px solid purple;position: absolute;left: 100px;top: 100px;}
+	.box1 img{width: 213px;height: 150px;position: absolute;left: 0;top: 0;}
+	.box2{width: 400px;height: 300px;position: absolute;left: 315px;top: 100px;border: 1px solid purple;overflow: hidden;display:none;}
+	.box2 img{width: 639px;height: 450px;position: absolute;left: 0;top: 0;}
+	.wl{width: 80px;height: 80px;background:yellow;position: absolute;left: 0;top: 0;z-index: 1;opacity:.4;filter:alpha(opacity=40);cursor:all-scroll;display:none;}
+</style>
+<script>
+	window.onload=function(){
+		var obox1 = document.getElementById('box1');
+		var owl = document.getElementById('wl');
+		var obox2 = document.getElementById('box2');
+		var omg = document.getElementById('omg');
+
+		obox1.onmouseover=function(){
+			owl.style.display=obox2.style.display='block';
+		}
+		obox1.onmouseout=function(){
+			owl.style.display=obox2.style.display='none';
+		}
+
+		owl.onmousemove=function(ev){
+			var et = ev||event;
+			var l = et.clientX-obox1.offsetLeft-owl.offsetWidth/2;
+			var t = et.clientY-obox1.offsetTop-owl.offsetHeight/2;
+			var x = obox1.offsetWidth-owl.offsetWidth;
+			var y = obox1.offsetHeight-owl.offsetHeight;
+			if (l<0) l=0;
+			if (t<0) t=0;
+			if (l>=x) l=x;
+			if (t>=y) t=y; 
+			owl.style.left=l+'px';
+			owl.style.top=t+'px';
+			var tp = t/y;
+			var lt = l/x;
+			omg.style.left=-(lt*(omg.offsetWidth-obox2.offsetWidth))+'px';
+			omg.style.top=-(tp*(omg.offsetHeight-obox2.offsetHeight))+'px';
+		}
+
+	}
+</script>
+</head>
+<body>
+	<div class="box1" id="box1">
+		<div class="wl" id="wl"></div>
+		<img src="2.jpg" alt="">
+	</div>
+	<div class="box2" id="box2">
+		<img src="2.jpg" alt="" id="omg">
+	</div>
+</body>
+</html>
