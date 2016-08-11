@@ -478,6 +478,7 @@ p.copy-right a{
 	}
  	.years p {
 		width: 80%;
+		font:18px/30px "宋体";
 	}
 	.portfolio-grid p {
 		margin: 2em 0em 0 0em;
