@@ -425,7 +425,8 @@ p.copy-right a{
  /*----- top-top -----*/
 @media (max-width:1280px){
  	.years p {
-		width: 60%;
+		width: 80%;
+		font:18px/30px "宋体";
 	}
 	.portfolio-grid p {
 		margin: 2em 0em 0 0em;
